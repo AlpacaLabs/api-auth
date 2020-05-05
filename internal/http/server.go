@@ -4,18 +4,18 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/AlpacaLabs/auth/internal/config"
-	"github.com/AlpacaLabs/auth/internal/services"
+	"github.com/AlpacaLabs/auth/internal/configuration"
+	"github.com/AlpacaLabs/auth/internal/service"
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
 )
 
 type Server struct {
-	config  config.Config
-	service services.Service
+	config  configuration.Config
+	service service.Service
 }
 
-func NewServer(config config.Config, service services.Service) Server {
+func NewServer(config configuration.Config, service service.Service) Server {
 	return Server{
 		config:  config,
 		service: service,

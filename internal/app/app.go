@@ -5,17 +5,17 @@ import (
 
 	"github.com/AlpacaLabs/auth/internal/grpc"
 
-	"github.com/AlpacaLabs/auth/internal/config"
+	"github.com/AlpacaLabs/auth/internal/configuration"
 	"github.com/AlpacaLabs/auth/internal/db"
 	"github.com/AlpacaLabs/auth/internal/http"
-	"github.com/AlpacaLabs/auth/internal/services"
+	"github.com/AlpacaLabs/auth/internal/service"
 )
 
 type App struct {
-	config config.Config
+	config configuration.Config
 }
 
-func NewApp(c config.Config) App {
+func NewApp(c configuration.Config) App {
 	return App{
 		config: c,
 	}
@@ -24,7 +24,7 @@ func NewApp(c config.Config) App {
 func (a App) Run() {
 	dbConn := db.Connect(a.config.DBUser, a.config.DBPass, a.config.DBHost, a.config.DBName)
 	dbClient := db.NewClient(dbConn)
-	svc := services.NewService(a.config, dbClient)
+	svc := service.NewService(a.config, dbClient)
 
 	var wg sync.WaitGroup
 

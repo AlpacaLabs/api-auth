@@ -4,11 +4,11 @@ import (
 	"sync"
 
 	"github.com/AlpacaLabs/auth/internal/app"
-	"github.com/AlpacaLabs/auth/internal/config"
+	"github.com/AlpacaLabs/auth/internal/configuration"
 )
 
 func main() {
-	c := config.LoadConfig()
+	c := configuration.LoadConfig()
 	a := app.NewApp(c)
 
 	var wg sync.WaitGroup
