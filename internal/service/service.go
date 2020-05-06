@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/AlpacaLabs/auth/internal/configuration"
-	"github.com/AlpacaLabs/auth/internal/db"
+	"github.com/AlpacaLabs/api-auth/internal/configuration"
+	"github.com/AlpacaLabs/api-auth/internal/db"
 	"google.golang.org/grpc"
 )
 

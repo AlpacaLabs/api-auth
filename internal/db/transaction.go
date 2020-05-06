@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlpacaLabs/auth/internal/db/entities"
+	"github.com/AlpacaLabs/api-auth/internal/db/entities"
 	paginationV1 "github.com/AlpacaLabs/protorepo-pagination-go/alpacalabs/pagination/v1"
 
 	authV1 "github.com/AlpacaLabs/protorepo-auth-go/alpacalabs/auth/v1"

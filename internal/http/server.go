@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/AlpacaLabs/auth/internal/configuration"
-	"github.com/AlpacaLabs/auth/internal/service"
+	"github.com/AlpacaLabs/api-auth/internal/configuration"
+	"github.com/AlpacaLabs/api-auth/internal/service"
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
 )

@@ -8,7 +8,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/AlpacaLabs/auth/internal/db/entities"
+	"github.com/AlpacaLabs/api-auth/internal/db/entities"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/pbkdf2"
 )

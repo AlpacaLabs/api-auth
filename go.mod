@@ -1,4 +1,4 @@
-module github.com/AlpacaLabs/auth
+module github.com/AlpacaLabs/api-auth
 
 go 1.14
 

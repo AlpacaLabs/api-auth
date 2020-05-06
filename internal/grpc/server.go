@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/AlpacaLabs/auth/internal/configuration"
-	"github.com/AlpacaLabs/auth/internal/service"
+	"github.com/AlpacaLabs/api-auth/internal/configuration"
+	"github.com/AlpacaLabs/api-auth/internal/service"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"

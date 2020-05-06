@@ -3,8 +3,8 @@ package main
 import (
 	"sync"
 
-	"github.com/AlpacaLabs/auth/internal/app"
-	"github.com/AlpacaLabs/auth/internal/configuration"
+	"github.com/AlpacaLabs/api-auth/internal/app"
+	"github.com/AlpacaLabs/api-auth/internal/configuration"
 )
 
 func main() {

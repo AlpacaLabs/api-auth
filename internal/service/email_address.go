@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	"github.com/AlpacaLabs/auth/internal/db"
+	"github.com/AlpacaLabs/api-auth/internal/db"
 	authV1 "github.com/AlpacaLabs/protorepo-auth-go/alpacalabs/auth/v1"
 	paginationV1 "github.com/AlpacaLabs/protorepo-pagination-go/alpacalabs/pagination/v1"
 )
