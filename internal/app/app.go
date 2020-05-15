@@ -3,6 +3,8 @@ package app
 import (
 	"sync"
 
+	"github.com/AlpacaLabs/go-kontext"
+
 	"github.com/AlpacaLabs/api-auth/internal/grpc"
 
 	"github.com/AlpacaLabs/api-auth/internal/configuration"
@@ -28,7 +30,23 @@ func (a App) Run() {
 		log.Fatalf("failed to dial database: %v", err)
 	}
 	dbClient := db.NewClient(dbConn)
-	svc := service.NewService(a.config, dbClient)
+
+	accountConn, err := kontext.Dial(a.config.AccountGRPCAddress)
+	if err != nil {
+		log.Fatalf("failed to dial Account service: %v", err)
+	}
+
+	mfaConn, err := kontext.Dial(a.config.MFAGRPCAddress)
+	if err != nil {
+		log.Fatalf("failed to dial MFA service: %v", err)
+	}
+
+	passwordConn, err := kontext.Dial(a.config.PasswordGRPCAddress)
+	if err != nil {
+		log.Fatalf("failed to dial Password service: %v", err)
+	}
+
+	svc := service.NewService(a.config, dbClient, accountConn, mfaConn, passwordConn)
 
 	var wg sync.WaitGroup
 

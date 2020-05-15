@@ -4,8 +4,11 @@ go 1.14
 
 require (
 	github.com/AlpacaLabs/go-config v0.0.0-20200513234945-e6f2b4c2c8d6
+	github.com/AlpacaLabs/go-kontext v0.0.0-20200514211239-1a863c770cea
+	github.com/AlpacaLabs/protorepo-account-go v0.0.0-20200515160225-7d122739336d
 	github.com/AlpacaLabs/protorepo-auth-go v0.0.0-20200515182136-850f56abf425
 	github.com/AlpacaLabs/protorepo-pagination-go v0.0.0-20200503181518-cbf4b2f30657
+	github.com/AlpacaLabs/protorepo-password-go v0.0.0-20200506190830-9020c4a86616
 	github.com/badoux/checkmail v0.0.0-20180430153108-0755fe2dc241
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/golang/protobuf v1.4.1 // indirect
