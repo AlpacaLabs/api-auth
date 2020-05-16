@@ -52,11 +52,11 @@ func (a App) Run() {
 
 	wg.Add(1)
 	httpServer := http.NewServer(a.config, svc)
-	httpServer.Run()
+	go httpServer.Run()
 
 	wg.Add(1)
 	grpcServer := grpc.NewServer(a.config, svc)
-	grpcServer.Run()
+	go grpcServer.Run()
 
 	wg.Wait()
 }
