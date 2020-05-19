@@ -17,17 +17,17 @@ const (
 	flagForGrpcPort = "grpc_port"
 	flagForHTTPPort = "http_port"
 
-	flagForAccountGrpcAddress = "account_service_address"
-	flagForAccountGrpcHost    = "account_service_host"
-	flagForAccountGrpcPort    = "account_service_port_grpc"
+	flagForAccountGrpcAddress = "api_account_service_address"
+	flagForAccountGrpcHost    = "api_account_service_host"
+	flagForAccountGrpcPort    = "api_account_service_port_grpc"
 
-	flagForMFAGrpcAddress = "mfa_service_address"
-	flagForMFAGrpcHost    = "mfa_service_host"
-	flagForMFAGrpcPort    = "mfa_service_port_grpc"
+	flagForMFAGrpcAddress = "api_mfa_service_address"
+	flagForMFAGrpcHost    = "api_mfa_service_host"
+	flagForMFAGrpcPort    = "api_mfa_service_port_grpc"
 
-	flagForPasswordGrpcAddress = "password_service_address"
-	flagForPasswordGrpcHost    = "password_service_host"
-	flagForPasswordGrpcPort    = "password_service_port_grpc"
+	flagForPasswordGrpcAddress = "api_password_service_address"
+	flagForPasswordGrpcHost    = "api_password_service_host"
+	flagForPasswordGrpcPort    = "api_password_service_port_grpc"
 )
 
 type Config struct {
